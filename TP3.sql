@@ -72,10 +72,10 @@ create table Employe (
     NumSup int,
     dateEmbauche date,
     sal decimal(10, 2),
-    comm decimal(10, 2)
+    comm decimal(10, 2),
     Numdep int,
     constraint fk_NumDep foreign key (Numdep) references Departement(NumDept),
-    constraint fk_NumSup foreign key KEY (NumSup) references Employe(NumEmp)
+    constraint fk_NumSup foreign key (NumSup) references Employe(NumEmp)
 );
 
 alter table Departement add (constraint uk_lieu unique (lieu));
