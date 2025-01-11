@@ -83,6 +83,7 @@ insert into departement values (1, 'College_of_computing', 'Benguerir');
 insert into departement values (1, 'College_of_computing', 'RUfisque');
 --ERROR 1062 (23000): Duplicate entry '10' for key 'departement.PRIMARY'
 
+alter table employe add (constraint ch_sal check (sal>500));
 insert into employe values (1111, 'MOMO', 'Etudiant', 1111, '1981-11-18', 250, NULL, 1);
 --ERROR 3819 (HY000): Check constraint 'ch_sal' is violated.
 
